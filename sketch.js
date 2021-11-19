@@ -21,27 +21,29 @@ function setup() {
   stand1 = new Stand(390,300,250,10);
   stand2 = new Stand(700,200,200,10);
  
-  //nivel uno
+  //nivel uno (CREA LOS BLOQUES NIVEL 1, 7 BLOQUES)
+  //EJEMPLO
   block1 = new Block(300,275,30,40);
-  console.log(block1);
   block2 = new Block(330,275,30,40);
   block3 = new Block(360,275,30,40);
   block4 = new Block(390,275,30,40);
   block5 = new Block(420,275,30,40);
   block6 = new Block(450,275,30,40);
   block7 = new Block(480,275,30,40);
-  //nivel dos
-  block8 = new Block(330,235,30,40);
-  block9 = new Block(360,235,30,40);
-  block10 = new Block(390,235,30,40);
-  block11 = new Block(420,235,30,40);
-  block12 = new Block(450,235,30,40);
-  //nivel tres
-  block13 = new Block(360,195,30,40);
-  block14 = new Block(390,195,30,40);
-  block15 = new Block(420,195,30,40);
-  //oarte superior
-  block16 = new Block(390,155,30,40);
+  //nivel dos (CREA LOS BLOQUES NIVEL 2, 5 BLOQUES)
+
+  
+  
+  
+  
+  //nivel tres (CREA LOS BLOQUES NIVEL 3, 3 BLOQUES)
+
+  
+  
+ 
+  //Parte superior (CREA LOS BLOQUES NIVEL 4, 1 BLOQUE)
+
+  
 
   //conjunto 2 para la segunda posición
   //nivel uno
@@ -57,11 +59,12 @@ function setup() {
   //parte superior
   blocks9 = new Block(700,95,30,40);
 
-  //soporte de la pelota con la resortera
+  //CREA UNA PELOTA CON Bodies.circle y agregala al mundo
   ball = Bodies.circle(50,200,20);
-  World.add(world,ball);
+ 
 
-  slingShot = new Slingshot(this.ball,{x:100,y:200});
+  //CREA LA RESORTERA Y AGREGA LA PELOTA Y EL PUNTO 100, 200
+  
 
 }
 function draw() {
@@ -87,7 +90,9 @@ function draw() {
   block6.display();
   block7.display();
   fill("pink");
-  block8.display();
+  
+  
+ /* block8.display();
   block9.display();
   block10.display();
   block11.display();
@@ -97,7 +102,9 @@ function draw() {
   block14.display();
   block15.display();
   fill("grey");
-  block16.display();
+  block16.display(); */
+  
+  
   fill("skyblue");
   blocks1.display();
   blocks2.display();
@@ -111,11 +118,16 @@ function draw() {
   fill("pink")
   blocks9.display();
   fill("gold");
-  imageMode(CENTER)
+  
+  
+ /* imageMode(CENTER)
   image(polygon_img ,ball.position.x,ball.position.y,40,40);
 
-  slingShot.display();
+  slingShot.display(); */
+  
 }
+
+
 function mouseDragged(){
   Matter.Body.setPosition(this.ball,{x:mouseX,y:mouseY});
 }
